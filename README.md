@@ -29,6 +29,7 @@ _Let's inspect the initial rows to analyze the data in its original format._
 
 Let's generate a new table where we can manipulate and restructure the data without modifying the original dataset.
 
+```sql
     CREATE TABLE club_member_info_cleaned (
 	    full_name VARCHAR(50),
 	    age INTEGER,
@@ -39,8 +40,11 @@ Let's generate a new table where we can manipulate and restructure the data with
 	    job_title VARCHAR(50),
 	    membership_date VARCHAR(50)
     );
+```
 
 # Copy all values from original table
 
+```sql
     INSERT INTO club_member_info_cleaned
     SELECT * FROM club_member_info
+```
