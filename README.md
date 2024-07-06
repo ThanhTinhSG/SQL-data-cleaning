@@ -38,5 +38,7 @@ Let's generate a new table where we can manipulate and restructure the data with
 	    membership_date VARCHAR(50)
     );
 
-INSERT INTO club_member_info_cleaned
-SELECT * FROM club_member_info
+# Copy all values from original table
+
+    INSERT INTO club_member_info_cleaned
+    SELECT * FROM club_member_info
