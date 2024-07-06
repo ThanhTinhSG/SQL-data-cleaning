@@ -8,4 +8,4 @@ FROM club_member_infor
 ORDER BY id
 LIMIT 10;
 
-[The result]
+The result:
