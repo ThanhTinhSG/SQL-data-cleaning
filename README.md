@@ -10,7 +10,7 @@ _Let's inspect the initial rows to analyze the data in its original format._
     LIMIT 10;
 ```
 
-The result:
+**The result:**
 |full_name|age|martial_status|email|phone|full_address|job_title|membership_date|
 |---------|---|--------------|-----|-----|------------|---------|---------------|
 |addie lush
