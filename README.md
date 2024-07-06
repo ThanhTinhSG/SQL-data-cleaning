@@ -4,7 +4,7 @@ _This is an educational project on data cleaning and preparation using SQL. The 
 _Let's inspect the initial rows to analyze the data in its original format._
 
     SELECT *
-    FROM club_member_infor
+    FROM club_member_info
     ORDER BY id
     LIMIT 10;
 
