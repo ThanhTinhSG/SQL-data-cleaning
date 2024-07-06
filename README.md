@@ -3,10 +3,10 @@ _This is an educational project on data cleaning and preparation using SQL. The 
 
 _Let's inspect the initial rows to analyze the data in its original format._
 
-SELECT *
+'SELECT *
 FROM club_member_infor
 ORDER BY id
-LIMIT 10;
+LIMIT 10;'
 
 The result:
 |full_name|age|martial_status|email|phone|full_address|job_title|membership_date|
