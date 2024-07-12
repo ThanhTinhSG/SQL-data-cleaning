@@ -48,3 +48,39 @@ Let's generate a new table where we can manipulate and restructure the data with
     INSERT INTO club_member_info_cleaned
     SELECT * FROM club_member_info
 ```
+
+
+# Full name column cleaning
+
+Even from the beginning we can find out that full_name column contains a lot of inconsistencies. I plan to:
+
+- Trim whitespaces
+- Covert all names to uppercase
+- Replace empty names with `NULL`
+
+  ## Trim whitespaces
+  ```sql
+  UPDATE club_member_info_cleaned SET full_name = TRIM(full_name)
+  ```
+
+  ## To uppercase
+  ```sql
+  UPDATE club_member_info_cleaned SET
+         full_name = CASE WHEN full_name = '' THEN NULL ELSE full_name END;
+  ```
+
+  ## Age cleaning
+
+  Possible issues with age:
+
+  - It could be empty.
+  - It could fall outside the realistic range (18 - 90).
+ 
+  Let's check if there are such values in our dataset:
+  ```sql
+  SELECT COUNT(*) FROM club_member_infor_cleaned
+         WHERE age < 18 OR age >  90 or age is NULL;
+  ```
+  **Result:**
+
+  
