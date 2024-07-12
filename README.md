@@ -128,7 +128,7 @@ UPDATE club_member_info_cleaned SET
        membership_date = TRIM(LOWER(membership_date));
 ```
 
-Also we can replace all empty values with `NUL`:
+Also we can replace all empty values with `NULL`:
 
 ```sql
 UPDATE club_member_info_cleaned SET
